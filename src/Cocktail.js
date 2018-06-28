@@ -1,18 +1,23 @@
-import React from "react";
+// import React, { Component } from "react";
+// import { Collapse } from "antd";
+// const Panel = Collapse.Panel;
 
-const Cocktail = props => (
-  <div>
-    <li>
-      <button
-        type="submit"
-        onClick={() => {
-          this.handleOnClick(props.drink.idDrink);
-        }}
-      >
-        {props.drink.strDrink}
-      </button>
-    </li>
-  </div>
-);
+// class Cocktail extends Component {
+//   handleOnClick = idDrink => {
+//     // alert(idDrink);
 
-export default Cocktail;
+//     //    this.componentDidMount() {
+//     fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita");
+//     //    }
+//   };
+
+//   render() {
+//     return (
+//       <Panel header={this.props.drink.strDrink} key={this.props.drink.idDrink}>
+//         <p>ldkfsldfj</p>
+//       </Panel>
+//     );
+//   }
+// }
+
+// export default Cocktail;

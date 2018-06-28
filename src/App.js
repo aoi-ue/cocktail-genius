@@ -2,39 +2,70 @@ import React, { Component } from "react";
 import Cocktails from "./Cocktails";
 import SearchBar from "./SearchBar";
 
+import { Layout } from "antd";
+import { Icon } from "antd";
+
+const { Content } = Layout;
+
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      drinks: []
+      drinks: [],
+      loading: true
     };
   }
 
   componentDidMount() {
-    this.getData("gin");
+    this.getData("");
   }
 
   getData = async search => {
-    const response = await fetch(
+    const ingredientResponse = await fetch(
       `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${search}`
     );
+    const cocktailResponse = await fetch(
+      `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${search}`
+    );
+    console.log(cocktailResponse);
     try {
-      const data = await response.json();
+      const ingredientData = await ingredientResponse.json();
+      const cocktailData = await cocktailResponse.json();
       this.setState({
-        drinks: data.drinks
+        drinks: ingredientData.drinks
+          .concat(cocktailData.drinks)
+          .filter(function(elem, index, self) {
+            return index === self.indexOf(elem);
+          }),
+        loading: false
       });
     } catch (error) {
-        this.setState ({
-            drinks: []
-        })
+      this.setState({
+        drinks: [],
+        loading: false
+      });
     }
+    console.log(this.state.drinks);
   };
 
   render() {
+    if (this.state.loading) {
+      return (
+        <div id="loading">
+          <Icon type="loading" style={{ fontSize: 60 }} spin />
+        </div>
+      );
+    }
     return (
       <div>
-        <SearchBar handleSubmit={this.getData} />
-        <Cocktails drinks={this.state.drinks} />
+        <Layout>
+          <br />
+          <SearchBar handleSubmit={this.getData} />
+          <br />
+          <Content>
+            <Cocktails drinks={this.state.drinks} />
+          </Content>
+        </Layout>
       </div>
     );
   }
