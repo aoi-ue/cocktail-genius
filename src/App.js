@@ -27,7 +27,6 @@ class App extends Component {
     const cocktailResponse = await fetch(
       `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${search}`
     );
-    console.log(cocktailResponse);
     try {
       const ingredientData = await ingredientResponse.json();
       const cocktailData = await cocktailResponse.json();
@@ -45,14 +44,13 @@ class App extends Component {
         loading: false
       });
     }
-    console.log(this.state.drinks);
-  };
+   };
 
   render() {
     if (this.state.loading) {
       return (
         <div id="loading">
-          <Icon type="loading" style={{ fontSize: 60 }} spin />
+          <Icon type="loading" style={{ fontSize: 50 }} spin />
         </div>
       );
     }

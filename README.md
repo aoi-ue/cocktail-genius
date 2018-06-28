@@ -1,8 +1,17 @@
 # Instructions
 ## Getting started
 
-Fork the repo
-Clone the repo
-cd into the directory and run npm install
-Run tests: npm test
-Start application: npm start and go to localhost:3000 in your browser
+- Fork this repo
+- `git clone <repo-url>` 
+- `cd` into directory
+- Run 'npm install' 
+- Start Application, Enjoy! 
+
+## Getting around 
+
+This is a Web App to generate a cocktail from your choice of liquor. Enjoy! 
+
+Demo: https://cocktail-genius.netlify.com/
+
+---
+Copyright (c) 2018 ThoughtWorks. For personal use and training purposes only; not to be copied or distributed without further approval.
