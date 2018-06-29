@@ -52,6 +52,7 @@ class Cocktails extends Component {
               return (
                 <Collapse onChange={() => this.getDrinkById(drink.idDrink)}>
                   <Panel showArrow={false} header={drink.strDrink} key={i}>
+                  <img src = {foundDrinks[0].strDrinkThumb} alt ="" />  
                     <h4>
                       <li>{foundDrinks[0].strIngredient1}</li>
                       <li>{foundDrinks[0].strIngredient2}</li>
@@ -66,7 +67,8 @@ class Cocktails extends Component {
                       <li>{foundDrinks[0].strIngredient11}</li>
                     </h4>
                     <br />
-                    <p> {foundDrinks[0].strInstructions} </p>
+                    <p> {foundDrinks[0].strInstructions}  </p>
+                    
                   </Panel>
                 </Collapse>
               );
