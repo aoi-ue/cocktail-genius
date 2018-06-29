@@ -15,8 +15,8 @@ Demo: https://cocktail-genius.netlify.com/
 
 ## Material Used 
 
--ReactJS 
--Ant-Design
+-ReactJS (https://github.com/facebook/create-react-app)
+-Ant-Design (https://ant.design/)
 
 ---
 Copyright (c) 2018 ThoughtWorks. For personal use and training purposes only; not to be copied or distributed without further approval.
