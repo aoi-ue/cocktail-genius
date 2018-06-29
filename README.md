@@ -5,7 +5,7 @@
 - `git clone <repo-url>` 
 - `cd` into directory
 - Run 'npm install' 
-- Start Application, Enjoy! 
+- Start Application
 
 ## Getting around 
 
@@ -15,9 +15,9 @@ Demo: https://cocktail-genius.netlify.com/
 
 ## Material Used 
 
--ReactJS (https://github.com/facebook/create-react-app)
--Ant-Design (https://ant.design/)
--API (https://www.thecocktaildb.com/api.php)
+- ReactJS (https://github.com/facebook/create-react-app)
+- Ant-Design (https://ant.design/)
+- API (https://www.thecocktaildb.com/api.php)
 
 ---
 Copyright (c) 2018 ThoughtWorks. For personal use and training purposes only; not to be copied or distributed without further approval.

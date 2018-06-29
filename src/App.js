@@ -50,7 +50,7 @@ class App extends Component {
     if (this.state.loading) {
       return (
         <div id="loading">
-          <h1>Ready?<Icon type="loading" style={{ fontSize: 50 }} spin /> </h1>
+          <h1><Icon type="loading" style={{ fontSize: 50 }} spin /> </h1>
         </div>
       );
     }
