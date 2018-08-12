@@ -64,7 +64,6 @@ class Cocktails extends Component {
                       <li>{foundDrinks[0].strIngredient8}</li>
                       <li>{foundDrinks[0].strIngredient9}</li>
                       <li>{foundDrinks[0].strIngredient10}</li>
-                      <li>{foundDrinks[0].strIngredient11}</li>
                     </h4>
                     <br />
                     <p> {foundDrinks[0].strInstructions}  </p>
